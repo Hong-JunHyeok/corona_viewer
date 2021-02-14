@@ -1,12 +1,15 @@
 import React from "react"
 import "./Main.scss"
 import { allCoronaData } from "selectors/corona/allCoronaData"
+import { eachRegionCoronaData } from "selectors/corona/eachRegionCoronaData"
 import { useRecoilValue } from "recoil"
 import { CoronaType } from "types/CoronaType"
 import DataCard from "components/Common/DataCard"
 
 function Main() {
     const coronaData: CoronaType = useRecoilValue(allCoronaData)
+    const eachCoronaData = useRecoilValue(eachRegionCoronaData)
+
     const { TotalCase, TotalDeath, TotalRecovered, NowCase, updateTime } = coronaData
     return (
         <div className="Main">
