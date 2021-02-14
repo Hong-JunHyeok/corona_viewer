@@ -3,7 +3,7 @@ import NavBar from "components/Common/NavBar"
 import React from "react"
 import { SpinnerRoundOutlined } from "spinners-react"
 
-const loadingDivStyle = {
+const loadingDivStyle: Object = {
     width: "100%",
     height: "80vh",
     display: "flex",

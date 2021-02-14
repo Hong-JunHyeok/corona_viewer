@@ -18,7 +18,7 @@ function RegionDataCard({ region }: PropsType) {
     return (
         <div className="RegionDataCard">
             <h1 className="">{region.countryName}</h1>
-            <div className="">총 확진자 : {region.newCase}</div>
+            <div className="">총 확진자 : {region.totalCase}</div>
             <div className="warning">총 사망자 : {region.death}</div>
             <div className="safe">총 완치자 : {region.recovered}</div>
         </div>
