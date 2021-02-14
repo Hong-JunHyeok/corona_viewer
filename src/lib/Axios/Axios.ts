@@ -1,4 +1,4 @@
-import axios from "axios"
+import axios, { AxiosResponse } from "axios"
 import { BASE_SERVER, SECRET_KEY } from "config/config.json"
 
 interface paramsType {
@@ -6,7 +6,7 @@ interface paramsType {
     secret_key?: string
 }
 
-export const getRequest = ({ url, secret_key }: paramsType) => {
-    const response = axios.get(`${url}/?serviceKey=${secret_key}`)
-    return response
+export const getRequest = async ({ url, secret_key }: paramsType) => {
+    const response: AxiosResponse = await axios.get(`${url}?serviceKey=${secret_key}`)
+    return response.data
 }
