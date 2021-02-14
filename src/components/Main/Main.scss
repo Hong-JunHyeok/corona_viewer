@@ -2,4 +2,31 @@
 .Main {
     width: 100%;
     padding: 2rem;
+    &_totalData {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid $gray_4;
+        &_data {
+            font-size: 24px;
+        }
+        &_title {
+            font-weight: bold;
+            font-size: 30px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        &_content {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+}
+
+.warning {
+    color: $orange_6;
+}
+.safe {
+    color: $teal_4;
 }
