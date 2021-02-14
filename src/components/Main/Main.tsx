@@ -3,14 +3,37 @@ import "./Main.scss"
 import { allCoronaData } from "selectors/corona/allCoronaData"
 import { eachRegionCoronaData } from "selectors/corona/eachRegionCoronaData"
 import { useRecoilValue } from "recoil"
-import { CoronaType } from "types/CoronaType"
+import { CoronaType, EachCoronaType } from "types/CoronaType"
 import DataCard from "components/Common/DataCard"
+import RegionDataCard from "components/Common/RegionDataCard"
 
 function Main() {
     const coronaData: CoronaType = useRecoilValue(allCoronaData)
-    const eachCoronaData = useRecoilValue(eachRegionCoronaData)
+    const eachCoronaData: EachCoronaType = useRecoilValue(eachRegionCoronaData)
 
     const { TotalCase, TotalDeath, TotalRecovered, NowCase, updateTime } = coronaData
+
+    const {
+        seoul,
+        daegu,
+        incheon,
+        jeju,
+        busan,
+        ulsan,
+        jeonbuk,
+        korea,
+        chungbuk,
+        chungnam,
+        daejeon,
+        gangwon,
+        gwangju,
+        gyeongbuk,
+        gyeonggi,
+        gyeongnam,
+        jeonnam,
+
+        sejong,
+    } = eachCoronaData
     return (
         <div className="Main">
             <div className="Main_totalData">
@@ -32,7 +55,30 @@ function Main() {
                     </DataCard>
                 </div>
             </div>
-            <div className="Main_eachRegionData"></div>
+            <div className="Main_eachRegionData">
+                <h1>각 지역 코로나 데이터({updateTime})</h1>
+                <div>
+                    <RegionDataCard region={seoul} />
+                    <RegionDataCard region={daegu} />
+                    <RegionDataCard region={incheon} />
+                    <RegionDataCard region={jeju} />
+                    <RegionDataCard region={busan} />
+                    <RegionDataCard region={ulsan} />
+                    <RegionDataCard region={jeonbuk} />
+                    <RegionDataCard region={korea} />
+                    <RegionDataCard region={chungbuk} />
+                    <RegionDataCard region={chungnam} />
+                    <RegionDataCard region={daejeon} />
+                    <RegionDataCard region={gangwon} />
+                    <RegionDataCard region={gwangju} />
+                    <RegionDataCard region={gyeongbuk} />
+                    <RegionDataCard region={gyeonggi} />
+                    <RegionDataCard region={gyeongnam} />
+                    <RegionDataCard region={jeonnam} />
+
+                    <RegionDataCard region={sejong} />
+                </div>
+            </div>
         </div>
     )
 }
