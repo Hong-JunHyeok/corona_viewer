@@ -1,0 +1,16 @@
+@import "styles/color_scheme.scss";
+
+.NavBar {
+    width: 100%;
+    padding: 1rem;
+    background-color: $blue_4;
+    &_projectTitle {
+        font-weight: bold;
+        font-size: 40px;
+        &::after {
+            content: "실시간 국내 코로나 정보를 한눈에!";
+            font-weight: lighter;
+            font-size: 14px;
+        }
+    }
+}

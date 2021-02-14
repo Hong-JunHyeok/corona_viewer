@@ -1,13 +1,13 @@
 import React from "react"
 import { BrowserRouter as Router, Route } from "react-router-dom"
-import Main from "./Main"
+import * as Pages from "pages"
 import "styles/reset.scss"
 
 function App() {
     return (
         <Router>
             <Route exact path="/">
-                <Main />
+                <Pages.MainPape />
             </Route>
             <Route exact></Route>
         </Router>

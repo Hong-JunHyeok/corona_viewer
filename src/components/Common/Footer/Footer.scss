@@ -1,0 +1,31 @@
+@import "styles/color_scheme.scss";
+.Footer {
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: $gray_6;
+    color: $white_2;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &_links {
+        width: 10%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        &_link {
+            border: 1px solid $white_2;
+            border-radius: 70%;
+            padding: 10px;
+
+            cursor: pointer;
+            transition: ease-in-out 0.2s;
+            &:hover {
+                background-color: $white_2;
+                color: $gray_6;
+            }
+        }
+    }
+}

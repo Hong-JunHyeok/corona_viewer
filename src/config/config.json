@@ -1,4 +1,7 @@
 {
     "BASE_SERVER": "https://api.corona-19.kr/korea",
-    "SECRET_KEY": "K8abJOAdZulyHr7hf1noESiRIDv3s6jxQ"
+    "SECRET_KEY": "K8abJOAdZulyHr7hf1noESiRIDv3s6jxQ",
+    "MY_GITHUB_LINK": "https://github.com/Hong-JunHyeok",
+    "MY_FACEBOOK_LINK": "https://www.facebook.com/programmingHong/",
+    "MY_TISTORY_LINK": "https://hong-jh.tistory.com/"
 }
